@@ -12,3 +12,7 @@
 .authLinkActive {
   color: rgb(197, 31, 19);
 }
+
+.container {
+  margin-right: 50px;
+}
