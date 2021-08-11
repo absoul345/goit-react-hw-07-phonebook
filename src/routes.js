@@ -2,6 +2,6 @@
 export default {
   home: '/goit-react-hw-07-phonebook',
   contacts: '/contacts',
-  login: '/login',
+  login: '/goit-react-hw-07-phonebook/login',
   register: '/registration',
 };
