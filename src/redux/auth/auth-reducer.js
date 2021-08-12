@@ -18,12 +18,17 @@ const token = createReducer(null, {
 });
 
 const setError = (_, { payload }) => payload;
+const unsetError = () => '';
 
-const error = createReducer(null, {
+const error = createReducer('', {
   [authActions.registerError]: setError,
+  [authActions.registerSloginRequest]: unsetError,
   [authActions.loginError]: setError,
+  [authActions.loginRequest]: unsetError,
   [authActions.logoutError]: setError,
+  [authActions.logoutRequest]: unsetError,
   [authActions.getCurrentUserError]: setError,
+  [authActions.loginRequest]: unsetError,
 });
 
 const isAuthenticated = createReducer(false, {

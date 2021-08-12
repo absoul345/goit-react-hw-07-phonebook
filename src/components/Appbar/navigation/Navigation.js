@@ -13,7 +13,7 @@ const Navigation = ({ isAuthenticated }) => {
             className={styles.navLink}
             activeClassName={styles.navItemActive}
             exact
-            to="/goit-react-hw-07-phonebook"
+            to="/"
           >
             Home
           </NavLink>

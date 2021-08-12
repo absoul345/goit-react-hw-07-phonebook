@@ -1,5 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
+import { authActions } from '../auth';
 import {
   addContactRequest,
   addContactSuccess,
@@ -13,15 +14,19 @@ import {
   fetchContactError,
 } from './phoneBook-actions';
 
+// const initialUserState = { filter: '', items: [] };
+
 const items = createReducer([], {
   [fetchContactSuccess]: (_, { payload }) => payload,
   [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
+  [authActions.logoutSuccess]: () => [],
 });
 
 const filter = createReducer('', {
   [changeFilter]: (_, { payload }) => payload,
+  [authActions.logoutSuccess]: () => '',
 });
 
 const loading = createReducer(false, {

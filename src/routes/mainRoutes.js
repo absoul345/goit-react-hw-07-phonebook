@@ -3,7 +3,7 @@ import { lazy } from 'react';
 export const mainRoutes = [
   {
     name: 'Home',
-    path: '/goit-react-hw-07-phonebook',
+    path: '/',
     component: lazy(
       () => import('../pages/home/HomePage') /* webpackChunkName: "HomePage" */,
     ),
@@ -19,7 +19,7 @@ export const mainRoutes = [
       () =>
         import(
           '../pages/registration/Registration'
-        ) /* webpackChunkName: "Registration" */,
+        ) /* webpackChunkName: "RegistrationPage" */,
     ),
     exact: true,
     restricted: true,
@@ -44,7 +44,7 @@ export const mainRoutes = [
       () =>
         import(
           '../pages/phonebook/Phonebook'
-        ) /* webpackChunkName: "Phonebook" */,
+        ) /* webpackChunkName: "PhonebookPage" */,
     ),
     exact: true,
     restricted: true,
