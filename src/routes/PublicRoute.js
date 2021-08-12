@@ -7,13 +7,14 @@ const PublicRoute = ({
   component: Component,
   isAuthenticated,
   redirectTo,
+  key,
   ...routeProps
 }) => (
   <Route
     {...routeProps}
     render={props =>
       isAuthenticated && routeProps.restricted ? (
-        <Redirect to={redirectTo} />
+        <Redirect to={redirectTo} key={key} />
       ) : (
         <Component {...props} />
       )
