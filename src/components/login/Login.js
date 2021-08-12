@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './LoginComponent.module.css';
+import styles from './Login.module.css';
 
-const LoginComponent = ({ email, password, handleChange, handleSubmit }) => {
+const Login = ({ email, password, handleChange, handleSubmit }) => {
   return (
     <div className={styles.loginContainer}>
       <h1 className={styles.loginHeader}>Login Page</h1>
@@ -36,4 +36,4 @@ const LoginComponent = ({ email, password, handleChange, handleSubmit }) => {
   );
 };
 
-export default LoginComponent;
+export default Login;

@@ -7,7 +7,7 @@ import { phoneBookOperations } from '../../redux/phoneBook';
 import { connect } from 'react-redux';
 import { getLoading, getError } from '../../redux/phoneBook/contacts-selectors';
 
-export class Phonebook extends Component {
+export class PhonebookPage extends Component {
   state = {};
 
   componentDidMount() {
@@ -39,4 +39,4 @@ const mapDispatchToProps = dispatch => ({
   fetchContacts: () => dispatch(phoneBookOperations.fetchContacts()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Phonebook);
+export default connect(mapStateToProps, mapDispatchToProps)(PhonebookPage);

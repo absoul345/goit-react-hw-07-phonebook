@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-import LoginComponent from '../../components/loginComponent/LoginComponent';
+import Login from '../../components/login/Login';
 
-export class Login extends Component {
+export class LoginPage extends Component {
   state = { email: '', password: '' };
 
   handleChange = ({ target: { name, value } }) => {
@@ -20,7 +20,7 @@ export class Login extends Component {
     const { email, password } = this.state;
     return (
       <>
-        <LoginComponent
+        <Login
           email={email}
           password={password}
           handleChange={this.handleChange}
@@ -34,4 +34,4 @@ export class Login extends Component {
 
 const mapDispatchToProps = { onLogin: authOperations.logIn };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(LoginPage);

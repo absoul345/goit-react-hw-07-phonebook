@@ -5,7 +5,8 @@ export const mainRoutes = [
     name: 'Home',
     path: '/',
     component: lazy(
-      () => import('../pages/home/HomePage') /* webpackChunkName: "HomePage" */,
+      () =>
+        import('../pages/homePage/HomePage') /* webpackChunkName: "HomePage" */,
     ),
     exact: true,
     restricted: false,
@@ -18,7 +19,7 @@ export const mainRoutes = [
     component: lazy(
       () =>
         import(
-          '../pages/registration/Registration'
+          '../pages/registrationPage/RegistrationPage'
         ) /* webpackChunkName: "RegistrationPage" */,
     ),
     exact: true,
@@ -30,7 +31,10 @@ export const mainRoutes = [
     name: 'Login',
     path: '/login',
     component: lazy(
-      () => import('../pages/login/Login') /* webpackChunkName: "LoginPage" */,
+      () =>
+        import(
+          '../pages/loginPage/LoginPage'
+        ) /* webpackChunkName: "LoginPage" */,
     ),
     exact: true,
     restricted: true,
@@ -43,7 +47,7 @@ export const mainRoutes = [
     component: lazy(
       () =>
         import(
-          '../pages/phonebook/Phonebook'
+          '../pages/phonebookPage/PhonebookPage'
         ) /* webpackChunkName: "PhonebookPage" */,
     ),
     exact: true,
